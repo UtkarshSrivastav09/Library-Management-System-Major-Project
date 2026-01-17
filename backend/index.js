@@ -49,20 +49,13 @@ app.use("/api/librarian", librarian);
 app.use("/api/home", home); 
 app.use("/api/borrow", borrowRoutes);
 
-// app.get("/", (req, res) => {
-//   res.send("Library Management System-----> API is Running..");
-// });
+app.get("/", (req, res) => {
+  res.send("Library Management System-----> API is Running..");
+});
 
 // Database connection and server start
 const PORT = process.env.PORT || 5000;
 const uri = process.env.MONGO_URI;
-
-// const _dirnam = path.resolve();
-
-// app.use(express.static(path.join(__dirname, "/frontend/dist")));
-// app.get('*', (_, res) =>{
-//   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-// });
 
 mongoose.connect(uri)
   .then(() => {
