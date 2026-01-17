@@ -9,10 +9,15 @@ const JWT_SECRET = process.env.JWT_SECRET || "12345@abcd12";
 
 // ================= NODEMAILER =================
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+   host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // Gmail App Password
+    pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -25,6 +30,8 @@ transporter.verify((error) => {
 });
 
 const userController = {};
+
+
 
 // ================= REGISTER =================
 userController.userRegistration = async (req, res) => {
