@@ -3,7 +3,7 @@
 A complete Library Management System built with MongoDB, Express.js, React.js, and Node.js. Features role-based access control with three user types (Admin, Librarian, Student), book management with Cloudinary image uploads, issue/return tracking, and automated fine calculations.
 
 
-Website is Live at -> https://library-management-system-major-pro.vercel.app/
+Website is Live at -> library-management-system-major-pro.vercel.app
 
 ## ✨ Key Features
 
