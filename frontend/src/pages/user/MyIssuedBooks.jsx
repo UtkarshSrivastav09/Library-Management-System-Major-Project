@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "http://localhost:5000/api/librarian";
+const SERVER_URL = "import.meta.env.VITE_API_URL/librarian";
 
 export default function MyIssuedBooks() {
   const [issuedBooks, setIssuedBooks] = useState([]);
