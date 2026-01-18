@@ -3,7 +3,7 @@ import axios from "axios";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 import "./viewbook.css";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 const ViewBooks = () => {
   const [books, setBooks] = useState([]);

@@ -5,7 +5,7 @@ import { getAuthToken } from "../../utils/auth";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
 // ✅ Backend URL
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 function ProfilePage() {
   const [user, setUser] = useState(null);

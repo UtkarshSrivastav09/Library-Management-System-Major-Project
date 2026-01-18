@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // import { Server_URL } from "../../utils/config";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 const AdminLogin = () => {
   const {

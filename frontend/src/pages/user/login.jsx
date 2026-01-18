@@ -6,7 +6,7 @@ import "./login.css";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
 // ✅ Backend URL (Vite-safe)
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 export default function Login() {
   const {

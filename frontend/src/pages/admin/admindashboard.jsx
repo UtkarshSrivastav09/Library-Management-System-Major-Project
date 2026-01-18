@@ -4,7 +4,7 @@ import { Pie } from "react-chartjs-2";
 import "chart.js/auto";
 import "./AdminDashboard.css";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 const AdminDashboard = () => {
   const [selectedSection, setSelectedSection] = useState("dashboard");

@@ -7,7 +7,7 @@ import { RiBookmarkLine } from "react-icons/ri";
 import "./bookdetails.css";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 function BookDetails() {
     const { id } = useParams();

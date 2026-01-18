@@ -4,7 +4,7 @@ import "./books.css";
 import { useNavigate } from "react-router-dom";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 const Books = () => {
   const [books, setBooks] = useState([]);

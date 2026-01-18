@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./VerifyOtp.css";
 
-const Server_URL = "http://localhost:5000";
+const Server_URL = import.meta.env.VITE_API_URL;
 
 function VerifyOTP() {
   const { register, handleSubmit, formState: { errors, isSubmitting }, setValue } = useForm();

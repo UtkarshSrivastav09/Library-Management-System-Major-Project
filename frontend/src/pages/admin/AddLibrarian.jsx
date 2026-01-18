@@ -4,7 +4,7 @@ import axios from "axios";
 // import { Server_URL } from "../../utils/config";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "http://localhost:5000";
+const SERVER_URL = import.meta.env.VITE_API_URL;
 
 export default function AddLibrarian() {
   const {
