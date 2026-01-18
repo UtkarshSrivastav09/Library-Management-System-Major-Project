@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { showErrorToast, showSuccessToast } from "../../utils/toasthelper";
 
-const SERVER_URL = "import.meta.env.VITE_API_URL";
-
+const SERVER_URL = import.meta.env.VITE_API_URL + '/api' ;
+ 
 export default function BooksBorrowed() {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);

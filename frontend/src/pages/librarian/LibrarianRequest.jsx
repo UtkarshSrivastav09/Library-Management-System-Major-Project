@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const SERVER_URL = "import.meta.env.VITE_API_URL";
+const SERVER_URL = import.meta.env.VITE_API_URL + "/api";
 
 export default function BooksBorrowed() {
   const [requests, setRequests] = useState([]);
